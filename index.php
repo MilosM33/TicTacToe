@@ -35,5 +35,5 @@
    require("footer.php");
    
    ?>
-<script src="minimax.js"></script>
-<script src="website.js"></script>
+<script src="javascript/minimax.js"></script>
+<script src="javascript/website.js"></script>
