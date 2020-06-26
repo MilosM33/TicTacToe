@@ -1,0 +1,232 @@
+
+html, body {
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+body{
+    position: relative;
+    
+    margin: 0;
+    min-height: 100vh;
+    padding: 0px;
+    background-color: #ffa07a;
+    --navBackgroundColorHighLight :blue;
+    --navBackgroundColor :#FF6E72;
+
+    --navHighLightColor :white;
+    --navColor :black;
+
+}
+a{
+    color: var(--navColor);
+    text-decoration: none;
+}
+.navcontainer > *{
+    color: var(--navColor);
+    transition-property: background-color color;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+    
+}
+
+footer {
+    position: absolute;
+    width: 100vw;
+    bottom: 0px;
+    padding: 1vw 1vh;
+    background-color: #FFC16E;
+}
+footer div{
+    display: flex;
+    justify-content: center;
+}
+footer div > *{
+    padding: 1vh;
+}
+.navcontainer>*:hover{
+    color: var(--navHighLightColor);
+    background-color: rgb(179, 76, 79);
+}
+
+@media (min-width:600px){
+    #content{
+    
+        display: grid;
+        align-items: center;
+        grid-template-columns: 25vw 30vw 25vw;
+        grid-template-rows: 0.25fr 1fr;
+        
+    }
+    .navcontainer{
+        display: flex !important;
+        
+        background-color: var(--navBackgroundColor);
+        width: 100vw;
+        justify-content: center;
+    }
+    .navcontainer > *{
+        
+        padding: 1rem;
+        font-size: calc(1vh+1rem);
+        
+    }
+    
+     table{
+        
+        width: 25vw;
+        height: 25vw;
+    }
+    #chat{
+        margin: 0 auto;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        grid-row: 2;
+        grid-column: 3;
+        background-color: white;
+    }
+    #content h2{
+        font-size: 2vw;
+        text-align: center;
+        width: 50%;
+        margin: 0 auto;
+        grid-column-start: 2;
+    }
+    table ,td,tr{
+        grid-row: 2;
+        grid-column-start: 2;
+        margin: 0 auto;
+        border: 1vw solid black;
+        border-collapse: collapse;
+    }
+    
+    #text{
+        position: absolute;
+        top: 5%;
+        left: 5%;
+        background-color: rgb(238, 235, 235);
+        width: 90%;
+        height: 80%;
+        
+        overflow-y: auto;
+    }
+    #chat >input[type ="text"]{
+        position: absolute;
+        bottom: 5%;
+        left: 5%;
+        font-size: 1vw;
+        width: 50%;
+        
+    }
+    #chat > input[type ="button"]{
+        position: absolute;
+        bottom: 5%;
+        left: 55.5%;
+        font-size: 1vw;
+        
+        
+    }
+}
+@media (max-width: 600px){  
+    #content{
+        margin: 0 auto;
+        display: grid;
+        align-items: center;
+        grid-template-columns:  40vh;
+        grid-template-rows: 0.25fr 1fr 1.5fr;
+        
+    }
+    #mobilenav[style]{
+        display: block !important;
+        width: 100vw;
+        padding: 1vh 0px;
+        background-color: var(--navBackgroundColor);
+    }
+    table{
+        grid-column: 1;
+        grid-row: 1;
+        width: 25vh;
+        height: 25vh;
+        
+    }
+    .navcontainer{
+        background-color: var(--navBackgroundColor);
+        width: 100vw;
+        display: none;
+    }
+    .navcontainer > *{
+        padding: 0.5em;
+        display: block;
+        
+    }
+    #chat{
+        position: relative;
+        margin: 0 auto;
+        width: 95%;
+        height: 95%;
+        grid-row: 3;
+        grid-column: 1;
+        background-color: white;
+    }
+    #content h2{
+        text-align: center;
+        font-size: 1.5rem;
+        width: 50%;
+        margin: 0 auto;
+        grid-column-start: 1;
+    }
+    table ,td,tr{
+        grid-row: 2;
+        grid-column-start: 1;
+        margin: 0 auto;
+        border: 1vw solid black;
+        border-collapse: collapse;
+    }
+    #text{
+        position: absolute;
+        top: 5%;
+        left: 5%;
+        background-color: rgb(238, 235, 235);
+        width: 90%;
+        height: 80%;
+        
+        overflow-y: auto;
+    }
+    #chat >input[type ="text"]{
+        position: absolute;
+        bottom: 5%;
+        left: 5%;
+        font-size: 1.5vh;
+        width: 50%;
+        
+    }
+    #chat > input[type ="button"]{
+        position: absolute;
+        bottom: 5%;
+        left:55.5%;
+        font-size: 1.5vh;
+        
+        
+    }
+}
+
+
+td{
+    
+    text-align: center;
+    font-size: 3rem;
+}
+
+#registerForm{
+
+display: flex;
+justify-content: center;
+position: relative;
+top: 25vh;
+}
+#registerForm *{
+    background-color: white;
+   margin: 1vw;
+    
+}
+
